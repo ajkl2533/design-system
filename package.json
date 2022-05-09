@@ -27,7 +27,7 @@
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' --fix",
     "lint:css": "stylelint 'src/**/*.{js,ts,tsx}'",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release --dry-run",
     "betterer": "betterer -t ./tsconfig.json -c .betterer/.betterer.ts -r .betterer/.betterer.results --strict",
     "betterer:precommit": "betterer precommit -t ./tsconfig.json -c .betterer/.betterer.ts -r .betterer/.betterer.results --strict",
     "betterer:ci": "betterer ci -t ./tsconfig.json -c .betterer/.betterer.ts -r .betterer/.betterer.results --strict",
