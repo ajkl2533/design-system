@@ -70,6 +70,7 @@ const Toast: React.FC<ToastProps> = ({
 }) => (
   <ToastContainer $width={width} onClick={stopPropagation}>
     <BaseToastBanner
+      iconAlign="center"
       iconPxSizesVariants={iconPxSizesVariants}
       iconSize={16}
       paddingSize={SpaceSizes.sm}
