@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { Inline } from '../../layout';
-import { Paragraph } from '../../typography';
+import { Paragraph } from '../../typographyLegacy';
 import { Button } from '../../Button';
 import { BottomBarProps } from './BottomBar.types';
 import { getSpace } from '../../../utils';
@@ -32,13 +32,12 @@ const BottomBar: React.FC<BottomBarProps> = ({
           color="primary"
           iconName="plus"
           margin={{ left: 0.5, right: 2 }}
-          size="md"
           variant="text"
           onClick={onAdd}
         >
           Add filter
         </AddFilterButton>
-        <Button color="primary" size="md" variant="text" onClick={onClearAll}>
+        <Button color="primary" variant="text" onClick={onClearAll}>
           Clear all
         </Button>
       </Inline>

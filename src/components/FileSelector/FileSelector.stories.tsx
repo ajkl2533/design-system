@@ -8,8 +8,8 @@ import { FileSelectorProps } from './FileSelector.types';
 import { FileSelectorSizes } from './FileSelector.enums';
 import { Inline, Padbox, Stack } from '../layout';
 import { SpaceSizes } from '../../theme/space.enums';
-import { TextSizes, TextVariants } from '../typography/Text/Text.enums';
-import { Text } from '../typography';
+import { TextSizes, TextVariants } from '../typographyLegacy/Text/Text.enums';
+import { Text } from '../typographyLegacy';
 import { getColor, getRadii } from '../../utils';
 
 export default {
@@ -41,6 +41,9 @@ const FileSelectorTemplate: Story<FileSelectorProps> = (args) => (
 );
 
 export const Playground = FileSelectorTemplate.bind({});
+Playground.parameters = {
+  screenshot: { skip: true },
+};
 Playground.parameters = {
   screenshot: { skip: true },
 };

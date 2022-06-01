@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { action } from '@storybook/addon-actions';
 
-import { Link, Paragraph } from '../typography';
+import { Link, Paragraph } from '../typographyLegacy';
 import { Inline, Stack } from '../layout';
 import { Button } from '../Button';
 import Dropdown from './Dropdown';
@@ -70,6 +70,9 @@ Playground.args = {
   trigger: <Button variant="outline">Trigger</Button>,
   onClose: action('onClose'),
   onOpen: action('onOpen'),
+};
+Playground.parameters = {
+  screenshot: { skip: true },
 };
 
 export const OnHoverEvent = DropdownTemplate.bind({});

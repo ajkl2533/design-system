@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { action } from '@storybook/addon-actions';
 
-import { Paragraph } from '../typography';
+import { Paragraph } from '../typographyLegacy';
 import { Center } from '../layout';
 import { ControlDropdownProps } from './ControlDropdown.types';
 import ControlDropdown from './ControlDropdown';
@@ -40,6 +40,9 @@ Playground.args = {
   onOpen: action('OnOpen'),
   onClose: action('OnClose'),
   onSubmit: action('OnSubmit'),
+};
+Playground.parameters = {
+  screenshot: { skip: true },
 };
 
 export const WithResetButton = ControlDropdownTemplate.bind({});

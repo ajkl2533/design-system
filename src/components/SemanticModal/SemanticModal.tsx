@@ -9,7 +9,7 @@ import { Modal, ModalEnums } from '../Modal';
 import { Button, ButtonEnums } from '../Button';
 import { ButtonColors } from '../Button/Button.enums';
 import { Icon } from '../Icon';
-import { H3, Text } from '../typography';
+import { H3, Text } from '../typographyLegacy';
 import {
   AbsoluteLinkActionKind,
   ActionKinds,
@@ -63,7 +63,6 @@ const SemanticModal = forwardRef<HTMLDivElement, SemanticModalProps>(
         color={color}
         href={(action as AbsoluteLinkActionKind<[React.MouseEvent]>).href}
         name={action.name}
-        size={SpaceSizes.lg}
         to={(action as RelativeLinkActionKind<[React.MouseEvent]>).to}
         variant={buttonVariant}
         onClick={action.onClick}

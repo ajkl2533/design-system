@@ -5,7 +5,7 @@ import { omit } from 'ramda';
 import { PortalPlacements } from '../../hooks/useCalculatePortalPlacements.enums';
 import { Inline, Padbox, Stack } from '../layout';
 import { Button } from '../Button';
-import { Paragraph } from '../typography';
+import { Paragraph } from '../typographyLegacy';
 import Tooltip from './Tooltip';
 import { TooltipProps } from './Tooltip.types';
 import { generateControl } from '../../utils/tests/storybook';
@@ -51,8 +51,11 @@ export const Playground: Story<
   TooltipProps & { children: React.ReactChild }
 > = (args) => <Tooltip {...args} />;
 Playground.args = {
-  children: <Button size="lg">Button with tooltip</Button>,
+  children: <Button>Button with tooltip</Button>,
   popup,
+};
+Playground.parameters = {
+  screenshot: { skip: true },
 };
 
 export const Placements: Story = () => (
@@ -62,36 +65,28 @@ export const Placements: Story = () => (
       popup={popup}
       defaultIsPopupDisplayed
     >
-      <Button size="md" isExpanded>
-        Top tooltip
-      </Button>
+      <Button isExpanded>Top tooltip</Button>
     </Tooltip>
     <Tooltip
       placement={PortalPlacements.right}
       popup={popup}
       defaultIsPopupDisplayed
     >
-      <Button size="md" isExpanded>
-        Right tooltip
-      </Button>
+      <Button isExpanded>Right tooltip</Button>
     </Tooltip>
     <Tooltip
       placement={PortalPlacements.left}
       popup={popup}
       defaultIsPopupDisplayed
     >
-      <Button size="md" isExpanded>
-        Left tooltip
-      </Button>
+      <Button isExpanded>Left tooltip</Button>
     </Tooltip>
     <Tooltip
       placement={PortalPlacements.bottom}
       popup={popup}
       defaultIsPopupDisplayed
     >
-      <Button size="md" isExpanded>
-        Bottom tooltip
-      </Button>
+      <Button isExpanded>Bottom tooltip</Button>
     </Tooltip>
   </Stack>
 );

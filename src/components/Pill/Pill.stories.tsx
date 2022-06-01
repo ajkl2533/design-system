@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { generateControl } from '../../utils/tests/storybook';
 import { Cluster, Inline, Stack } from '../layout';
-import { H4 } from '../typography';
+import { H4 } from '../typographyLegacy';
 import { Icon } from '../Icon';
 import Pill from './Pill';
 import { PillProps } from './Pill.types';
@@ -36,6 +36,9 @@ const PillTemplate: Story<PillProps> = (args) => (
 export const Playground: Story<PillProps> = (args) => <Pill {...args} />;
 Playground.args = {
   label: 'Pill label',
+};
+Playground.parameters = {
+  screenshot: { skip: true },
 };
 
 export const Variants = PillTemplate.bind({});

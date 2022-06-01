@@ -7,7 +7,7 @@ import Drawer from './Drawer';
 import { DrawerProps } from './Drawer.types';
 import { DrawerSizes } from './Drawer.enums';
 import { SemanticModal } from '../SemanticModal';
-import { H2, Link, Paragraph, Text } from '../typography';
+import { H2, Link, Paragraph, Text } from '../typographyLegacy';
 import { Inline, Padbox, Stack } from '../layout';
 import { Button, ButtonEnums } from '../Button';
 import { Icon } from '../Icon';
@@ -41,10 +41,8 @@ export default {
 function Footer() {
   return (
     <Inline gap={SpaceSizes.md} justify="flex-end">
-      <Button size={SpaceSizes.lg} variant="outline">
-        Cancel
-      </Button>
-      <Button size={SpaceSizes.lg}>Confirm</Button>
+      <Button variant="outline">Cancel</Button>
+      <Button>Confirm</Button>
     </Inline>
   );
 }
@@ -74,12 +72,7 @@ export const Playground: Story<DrawerProps> = (args) => {
   return (
     <Padbox paddingSize={SpaceSizes.xxl}>
       <Inline justify="center">
-        <Button
-          size={ButtonEnums.ButtonSizes.lg}
-          onClick={() => setIsShown(!isShown)}
-        >
-          Open drawer
-        </Button>
+        <Button onClick={() => setIsShown(!isShown)}>Open drawer</Button>
         {isShown && (
           <Drawer
             footer={<Footer />}
@@ -93,6 +86,10 @@ export const Playground: Story<DrawerProps> = (args) => {
       </Inline>
     </Padbox>
   );
+};
+
+Playground.parameters = {
+  screenshot: { skip: true },
 };
 
 export const WithTitleAndAdornment: Story = () => (

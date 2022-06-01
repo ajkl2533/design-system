@@ -23,6 +23,9 @@ export const Playground: Story<AccordionProps> = (args) => (
   <Accordion {...args} />
 );
 Playground.args = { items };
+Playground.parameters = {
+  screenshot: { skip: true },
+};
 
 export const DefaultAccordion: Story = () => (
   <Accordion items={items}>Accordion</Accordion>
@@ -35,3 +38,10 @@ export const DoesNotCollapsOnOpen: Story = () => (
   </Accordion>
 );
 DoesNotCollapsOnOpen.storyName = 'Does not collapse on open';
+
+export const NoCardAccordion: Story = () => (
+  <Accordion isCard={false} items={items}>
+    Accordion
+  </Accordion>
+);
+NoCardAccordion.storyName = 'Accordion without card wrapper';
