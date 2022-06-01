@@ -18,6 +18,7 @@ export const ColorTypes = {
   neutral1000: 'neutral.1000',
   info50: 'info.50',
   info500: 'info.500',
+  info700: 'info.700',
   success50: 'success.50',
   success100: 'success.100',
   success500: 'success.500',

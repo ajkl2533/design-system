@@ -23,6 +23,7 @@ export const colors = {
   info: {
     50: '#f2f8fd',
     500: '#1e88e5',
+    700: '#41299A',
   },
   success: {
     50: '#edf6ef',
