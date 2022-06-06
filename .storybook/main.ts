@@ -1,7 +1,7 @@
 const { includes } = require('ramda');
 
 module.exports = {
-  stories: ['../src/**/*.stories.@(tsx|jsx|mdx)'],
+  stories: ['../src/**/*.stories.@(tsx|jsx|mdx)', '../docs/*.stories.mdx'],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-actions',
